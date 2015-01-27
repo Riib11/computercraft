@@ -1,0 +1,39 @@
+modem = peripheral.wrap("left")
+rednet.open("left")
+
+local up = "up"
+local dn = "down"
+local lt = "left"
+local rt = "right"
+local fr = "for"
+local bk = "back"
+local pc = "place"
+
+while true do
+
+	senderId, msg, protocol = rednet.receive()
+
+	if msg == up then
+		print("Moving up")
+		turtle.up()
+	end if msg == dn then
+		print("Moving down")
+		turtle.down()
+	end if msg == lt then
+		print("Moving left")
+		turtle.turnLeft()
+	end if msg == rt then
+		print("Moving right")
+		turtle.turnRight()
+	end if msg == fr then
+		print("Moving forward")
+		turtle.forward()
+	end if msg == bk then
+		print("Moving kack")
+		turtle.back()
+	end if msg == pc then
+		print("Placing a block")
+		turtle.place();
+	end
+
+end
