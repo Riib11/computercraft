@@ -1,1 +1,6 @@
 print("This was updated just now!")
+print("Enter your name here: ")
+local name = read()
+
+print(" ")
+print("You are " .. name)
