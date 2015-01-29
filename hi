@@ -2,5 +2,5 @@ print("This was updated just now!")
 print("Enter your name here: ")
 local name = read()
 
-print(" ")
-print("You are " .. name)
+screen = peripheral.wrap("right")
+screen.text("Hi, you are " .. name)
